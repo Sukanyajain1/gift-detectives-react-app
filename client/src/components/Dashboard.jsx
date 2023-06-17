@@ -15,7 +15,6 @@ const Dashboard = () => {
             {isLogged?
             <div>
                 <h1>Welcome {currentUser.firstName}, you're in the dashboard!</h1>
-                {/* <NavLink to={"/pizza-time/pizza/new"} className="">Add a wishlist to your calendar</NavLink> */}
 
                 {/* there should be boxes that we will fill things into */}
                 <div className=" d-flex border border-danger p-3 mt-5">

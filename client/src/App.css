@@ -1,12 +1,14 @@
-/* .main-content{
+.main-content{
   padding: 20px;
   display: flex;
   align-items: center;
   justify-content: center;
-} */
+  background-color: #feffff;
+}
 
 .primary-bg {
-  background-color: skyblue;
+  background-color: #e9dbca;
+  color: #443a35;
 }
 
 /* .secondary-bg {
@@ -20,6 +22,9 @@
   width: 200px;
   height: 150px;
   border: 2px solid orange;
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+  border-radius: 2px;
 }
 
 .nav{
@@ -83,10 +88,11 @@ label {
 } */
 
 .calendar-selected-date {
-  background-color: rgb(131, 125, 125);
-  color: white;
+  background-color: #e9dbca;
+  color: #443a35;
   padding: 1em;
   border-radius: 10px;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
   font-family: Arial, Helvetica, sans-serif;
   /* text-decoration: ; */
   /* font-weight: ; */
@@ -96,8 +102,8 @@ label {
 .react-calendar {
   width: 800px;
   max-width: 100%;
-  background-color: rgb(131, 125, 125);
-  color: white;
+  background-color: #ece5dc;
+  color: #443a35;
   border-radius: 10px;
   box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
   font-family: Arial, Helvetica, sans-serif;
@@ -106,9 +112,9 @@ label {
 
 /* the top line with the month and year--> also including the toggle buttons on both sides to change the month */
 .react-calendar__navigation button {
-  color: white;
+  color: #443a35;
   min-width: 44px;
-  background:none;
+  background: none;
   font-size: 16px;
   margin-top: 8px;
 }

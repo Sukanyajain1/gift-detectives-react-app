@@ -1,9 +1,14 @@
+/* .App {
+  background-color: #F8FBF5;
+} */
+
+
 .main-content{
   padding: 20px;
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #feffff;
+  /* background-color: #000001; */
 }
 
 .primary-bg {
@@ -18,13 +23,21 @@
   width: 
 } */
 
+.nav-logo{
+  color: white;
+  text-shadow: 2px 2px 4px #000000;
+}
 .content-box {
   width: 200px;
   height: 150px;
-  border: 2px solid orange;
-  -moz-border-radius: 2px;
-  -webkit-border-radius: 2px;
-  border-radius: 2px;
+  padding: 20px;
+  margin: 10px;
+  background-color: #C9C78B;
+  border: 2px solid #746359;
+  -moz-border-radius: 3em 1em;
+  -webkit-border-radius: 3em 1em;
+  border-radius: 3em 1em;
+  text-align: center;
 }
 
 .nav{
@@ -35,8 +48,15 @@
   margin-right: 20px;
 }
 
+a {
+  text-decoration: none;
+  color: #443a35;
+  margin: 0px 10px;
+}
+
 ul {
   list-style-type: none;
+  /* text-decoration: none; */
   display: flex;
   align-content: center;
   justify-content: space-between;
@@ -49,7 +69,7 @@ ul {
 }
 
 .footer {
-  height: 200px;
+  height: 100px;
   position: relative;
 }
 
@@ -91,8 +111,9 @@ label {
   background-color: #e9dbca;
   color: #443a35;
   padding: 1em;
+  border: 1.5px solid #746359;
   border-radius: 10px;
-  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 10px 24px rgb(116, 99, 89, 0.4);
   font-family: Arial, Helvetica, sans-serif;
   /* text-decoration: ; */
   /* font-weight: ; */
@@ -104,8 +125,9 @@ label {
   max-width: 100%;
   background-color: #ece5dc;
   color: #443a35;
+  border: 1.5px solid #746359;
   border-radius: 10px;
-  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 10px 24px rgb(116, 99, 89, 0.4);
   font-family: Arial, Helvetica, sans-serif;
   line-height: 1.75em;
 }
@@ -156,6 +178,8 @@ label {
   display: flex;
   height: 44px;
   margin-bottom: 1em;
+  background-color: #C9C78B;
+  border-radius: 10px 10px 0px 0px;
 }
 
 .react-calendar__navigation button:enabled:hover,
@@ -223,7 +247,9 @@ label {
 
 .react-calendar__tile--now {
   /* background: #ffff76; */
-  background-color: #6f48eb;
+  /* used to be indigo-ish purple */
+  /* background-color: #6f48eb; */
+  background-color: #c9b4a8;
 }
 
 .react-calendar__tile--now:enabled:hover,
@@ -242,13 +268,15 @@ label {
 
 .react-calendar__tile--active {
   /* background: #006edc; */
-  background: #6f48eb;
+  /* background: #6f48eb; */
+  background: #c9b4a8;
   color: white;
 }
 
 .react-calendar__tile--active:enabled:hover,
 .react-calendar__tile--active:enabled:focus {
-  background: #1087ff;
+  /* background: #1087ff; */
+  background: #bb9a88;
 }
 
 .react-calendar--selectRange .react-calendar__tile--hover {

@@ -6,8 +6,8 @@ const db = {};
 db.mongoose = mongoose;
 
 db.user = require("./user.model");
-// db.sauce = require("./sauce.model");
-// db.topping = require("./topping.model");
+db.event = require("./event.model");
+db.wishList = require("./wishList.model");
 // db.pizzaSize = require("./pizzaSize.model");
 // db.crust = require("./crust.model");
 // db.deliveryMethod = require("./deliveryMethod.model");

@@ -1,8 +1,8 @@
 import React, {useEffect, useState} from 'react';
 import axios from 'axios'
 import { useNavigate, NavLink } from 'react-router-dom';
-import '../App.css'
-import WithAuth from './WithAuth';
+// import '../App.css'
+import WithAuth from '../WithAuth';
 import SigninNav from './SigninNav';
 
 
@@ -44,12 +44,12 @@ const TopNav = (props) => {
 
                 <div className="nav primary-bg">
                     <div className="container-fluid d-flex align-items-center justify-content-between">
-                        <h2>Gift Detectives</h2>
+                        <h1>Gift Detectives</h1>
                         {isLogged ? (
                             <div>
-                                <NavLink to="/pizza-time/dashboard" className={({isActive}) => (isActive ? "active-style" : 'none')}>Dashboard</NavLink>
-                                <NavLink to="/pizza-time/order-summary" className={({isActive}) => (isActive ? "active-style" : 'none')}>Inbox ({numInCart})</NavLink>
-                                <NavLink to="/pizza-time/account-info" className={({isActive}) => (isActive ? "active-style" : 'none')}>Account Info</NavLink>
+                                <NavLink to="/dashboard" className={({isActive}) => (isActive ? "active-style" : 'none')}>Dashboard</NavLink>
+                                <NavLink to="/chats" className={({isActive}) => (isActive ? "active-style" : 'none')}>Inbox ({numInCart})</NavLink>
+                                <NavLink to="/my-profile" className={({isActive}) => (isActive ? "active-style" : 'none')}>Account Info</NavLink>
                                 <NavLink onClick={logout} className={({isActive}) => (isActive ? "active-style" : 'none')}>Logout</NavLink>
                             </div>
                         ) : 

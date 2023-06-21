@@ -21,6 +21,8 @@ require("./server/config/mongoose.config")
 
 // routes
 require('./server/routes/user.routes')(app)
+require('./server/routes/event.routes')(app)
+require('./server/routes/wishList.routes')(app)
 
 
 

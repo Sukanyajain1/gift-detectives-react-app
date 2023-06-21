@@ -15,9 +15,7 @@ const Dashboard = () => {
             {isLogged?
             <div>
                 <h1>Welcome {currentUser.firstName}, you're in the dashboard!</h1>
-
-                {/* there should be boxes that we will fill things into */}
-                <div className=" d-flex border border-danger p-3 mt-5">
+                <div className=" d-flex justify-content-between border border-danger p-3 mt-2">
                     <div>
                         <div className='content-box'>this is for the monthly overview</div>
                         <div className='content-box'>this is for the upcoming events and pending gifts reminder</div>
@@ -25,7 +23,7 @@ const Dashboard = () => {
                         <div className='content-box'>this is for the carousel</div>
                     </div>
                     <div className="">
-                        <h1 className="header">React Calendar</h1>
+                        <h1 className="header">Your React Calendar</h1>
                         <div className="calendar-container">
                             <Calendar onChange={setDate} value={date}/>
                         </div>
@@ -34,10 +32,18 @@ const Dashboard = () => {
                         </div>
                     </div>
                 </div>
+                <div className='border border-dark mt-3'>
+                    <h1>this is the container for the calendar results</h1>
+                    <h5>There are no events saved for: {date.toDateString()}</h5>
+                    <NavLink to={`/event/new/${date}`} className="">Add Event!</NavLink>
+                    
+                    <h5>There are (#) events saved for: {date.toDateString()}</h5>
+                    <NavLink to={`/event/new/${date}`} className="">Check them out!</NavLink>
+                </div>
             </div>
             : <div>
                 <h1>Sorry! Seems like you're not logged in yet! Dashboard</h1>
-                <NavLink to={"/welcome/login"} className="">Sign in Here and Start your Gift Lists!</NavLink>
+                <NavLink to={"/signin"} className="">Sign in Here and Start your Gift Lists!</NavLink>
             </div>
             }
         </>

@@ -18,14 +18,14 @@ const TopNav = (props) => {
     useEffect(() => {
 
         if(isLogged) {
-            axios.get(`http://localhost:8000/api/pizzas/in_cart/${currentUser._id}`)
-                .then((res)=>{
-                    // console.log("This is the api result: ", res);
-                    setNumInCart((res.data.results).length);
-                })
-                .catch(err=>{
-                    console.log("Axios error: ", err);
-                });
+            // axios.get(`http://localhost:8000/api/pizzas/in_cart/${currentUser._id}`)
+            //     .then((res)=>{
+            //         // console.log("This is the api result: ", res);
+            //         setNumInCart((res.data.results).length);
+            //     })
+            //     .catch(err=>{
+            //         console.log("Axios error: ", err);
+            //     });
         }
     }, [currentUser, isLogged]);
 

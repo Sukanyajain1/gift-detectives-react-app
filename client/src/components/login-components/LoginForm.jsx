@@ -48,11 +48,11 @@ const LoginForm = () => {
                     <div className="form-group">
                     <p className="text-danger">{formErrors}</p>
                         <label htmlFor="">Email</label>
-                        <input type="text" name="email" id="" className = 'form-control' onChange={changeHandler} />
+                        <input type="text" name="email" className = 'form-control' onChange={changeHandler} />
                     </div>
                     <div className="form-group">
                         <label htmlFor="">Password</label>
-                        <input type="password" name="password" id="" className = 'form-control' onChange={changeHandler} />
+                        <input type="password" name="password" className = 'form-control' onChange={changeHandler} />
                     </div>
                     
                     <input type="submit" value="Login" className="btn btn-primary mt-3" />

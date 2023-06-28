@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import {useParams, NavLink} from 'react-router-dom';
+import EventForm from './EventForm';
+import OneEvent from './OneEvent';
 
 const NewEvent = () => {
 
@@ -7,9 +9,9 @@ const NewEvent = () => {
     const [eventId, setEventId] = useState()
     const [formErrors, setFormErrors] = useState()
     
-    useEffect(() => {
-        // get the list of all events for the user in the database (both own and shared by friends) color code based on if user id matches the current id.
-    }, [myEventsToggler]);     // this toggler dependency variable can be reused for a host of different arrow functions like removing an event from the calendar list, the submitHandler for adding a new event to update the event list, etc.
+    // useEffect(() => {
+    //     // get the list of all events for the user in the database (both own and shared by friends) color code based on if user id matches the current id.
+    // }, [myEventsToggler]);     // this toggler dependency variable can be reused for a host of different arrow functions like removing an event from the calendar list, the submitHandler for adding a new event to update the event list, etc.
 
     // a different toggler variable will need to be used --- ACTUALLY NEVERMIND, there is no need for a toggler because the eventID state variable can be used as the dependency variable in the event form component-> sent as a prop to event form from this page/component.
     const changeHandler = ()=>{
@@ -46,7 +48,7 @@ const NewEvent = () => {
 
 
 
-            <h3>Create an Event for {Date(date)}.</h3>
+            {/* <h3>Create an Event for {Date(date)}.</h3> */}
             <form onSubmit={submitHandler}>
                 <div className="form-group">
                 <p className="text-danger">{formErrors}</p>

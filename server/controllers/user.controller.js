@@ -100,6 +100,7 @@ class UserController {
                 res.json({results: foundUser})
             })
             .catch(err=>{
+                // res.json({msg: "Logged out"})
                 res.json(err)
             })
     }

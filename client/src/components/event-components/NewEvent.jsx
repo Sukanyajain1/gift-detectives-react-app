@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from 'react';
-import {useParams, NavLink} from 'react-router-dom';
+import {useParams, useOutletContext, NavLink} from 'react-router-dom';
 import EventForm from './EventForm';
 import OneEvent from './OneEvent';
 
 const NewEvent = () => {
 
-    const {date} = useParams();
+    const [currentUser, isLogged] = useOutletContext();
+    // const {date} = useParams();
     const [eventId, setEventId] = useState()
     const [formErrors, setFormErrors] = useState()
     
@@ -37,24 +38,35 @@ const NewEvent = () => {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
+{/*
+    =======================================================
+                THE NEW EVENT FORM COMPONENT
+    =======================================================
+*/}
             {/* <h3>Create an Event for {Date(date)}.</h3> */}
             <form onSubmit={submitHandler}>
-                <div className="form-group">
                 <p className="text-danger">{formErrors}</p>
+                <div className="form-group">
                     <label htmlFor="">Name: </label>
                     <input type="text" name="name" id="" className = 'form-control' onChange={changeHandler} />
                 </div>
+                <div className="form-group">
+                    <label htmlFor="">Date: </label>
+                    <input type="text" name="name" id="" className = 'form-control' onChange={changeHandler} />
+                </div>
+                <div className="form-group">
+                    <label htmlFor="">Time: </label>
+                    <input type="text" name="name" id="" className = 'form-control' onChange={changeHandler} />
+                </div>
+                <div className="form-group">
+                    <label htmlFor="">Venue: </label>
+                    <input type="text" name="name" id="" className = 'form-control' onChange={changeHandler} />
+                </div>
+                <div className="form-group">
+                    <label htmlFor="">Price Range: </label>
+                    <input type="text" name="name" id="" className = 'form-control' onChange={changeHandler} />
+                </div>
+
                 <div className="form-group">
                     <label htmlFor="">Memo (Optional): </label>
                     <input type="text" name="memo" id="" className = 'form-control' onChange={changeHandler} />

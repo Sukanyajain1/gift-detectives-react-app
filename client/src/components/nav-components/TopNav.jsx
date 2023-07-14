@@ -15,19 +15,19 @@ const TopNav = (props) => {
     const [numInCart, setNumInCart] = useState();
 
 
-    useEffect(() => {
+    // useEffect(() => {
 
-        if(isLogged) {
-            // axios.get(`http://localhost:8000/api/pizzas/in_cart/${currentUser._id}`)
-            //     .then((res)=>{
-            //         // console.log("This is the api result: ", res);
-            //         setNumInCart((res.data.results).length);
-            //     })
-            //     .catch(err=>{
-            //         console.log("Axios error: ", err);
-            //     });
-        }
-    }, [currentUser, isLogged]);
+    //     // if(isLogged) {
+    //     //     // axios.get(`http://localhost:8000/api/pizzas/in_cart/${currentUser._id}`)
+    //     //     //     .then((res)=>{
+    //     //     //         // console.log("This is the api result: ", res);
+    //     //     //         setNumInCart((res.data.results).length);
+    //     //     //     })
+    //     //     //     .catch(err=>{
+    //     //     //         console.log("Axios error: ", err);
+    //     //     //     });
+    //     // }
+    // }, [currentUser, isLogged]);
 
     const logout = ()=>{
         axios.get("http://localhost:8000/api/users/logout", {withCredentials:true})

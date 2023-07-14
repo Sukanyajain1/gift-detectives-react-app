@@ -26,11 +26,11 @@ const WithAuth = (Component) => {
             // User is not logged in
             setIsLogged(false);
             setIsLoading(false);
-            navigate("/signin", { replace: true });
+            // navigate("/signin", { replace: true });
             }
         };
 
-        checkAuthStatus();
+        checkAuthStatus();    //calling the axios arrow function from line 14.
         }, [navigate]);
 
         if (isLoading) {

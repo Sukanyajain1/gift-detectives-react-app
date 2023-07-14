@@ -43,7 +43,7 @@ function App() {
 
     {/* all of the event routes nested in the EventRoutes component */}
           <Route path = "event" element= {<EventRoutes/>}>
-            <Route path = "new/:date" element= {<NewEvent/>}/>
+            <Route path = "new" element= {<NewEvent/>}/>
             {/* <Route path = "show/:id" element= {<OneEvent/>}/>
             <Route path = "edit/:id" element= {<EditEvent/>}/> */}
           </Route>

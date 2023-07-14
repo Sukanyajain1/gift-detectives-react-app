@@ -35,10 +35,14 @@ const Dashboard = () => {
                 <div className='border border-dark mt-3'>
                     <h1>this is the container for the calendar results</h1>
                     <h5>There are no events saved for: {date.toDateString()}</h5>
-                    <NavLink to={`/event/new/${date}`} className="">Add Event!</NavLink>
+                    <NavLink to={"/event/new"} className="">Add Event!</NavLink>
                     
                     <h5>There are (#) events saved for: {date.toDateString()}</h5>
-                    <NavLink to={`/event/new/${date}`} className="">Check them out!</NavLink>
+                    {/* <NavLink to={{
+                        pathname: `/event/new/${date}`,
+                        aboutProps: {
+                            date: date
+                        }}} className="">Check them out!</NavLink> */}
                 </div>
             </div>
             : <div>
